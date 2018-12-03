@@ -1,0 +1,19 @@
+eureka:
+  #  将自己注册到服务中心
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+
+spring:
+  application:
+    name: gateway
+server:
+  #  配置绑定的端口
+  port: 8083
+zuul:
+  #  配置代理的服务路由
+  routes:
+    service0: /service/0/**
+    service1: /service/1/**
+
